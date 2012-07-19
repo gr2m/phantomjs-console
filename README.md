@@ -3,7 +3,7 @@ Phantomjs Console
 
 Control a headless browser console right from your terminal
 
-[![Phantom Console Screencast](//cloud.github.com/downloads/gr2m/phantomjs-console/phantom-console-screencast.png)](//cloud.github.com/downloads/gr2m/phantomjs-console/phantom-console-screencast.mov)
+[![Phantom Console Screencast](http://cloud.github.com/downloads/gr2m/phantomjs-console/phantom-console-screencast.png)](http://cloud.github.com/downloads/gr2m/phantomjs-console/phantom-console-screencast.mov)
 
 Dependencies
 --------------

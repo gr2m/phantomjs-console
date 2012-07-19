@@ -43,7 +43,7 @@ Usage
 $ $EDITOR .command.js 
 
 # start console
-phantomjs phantomjs_console.coffee http://google.com
+$ phantomjs phantomjs_console.coffee http://google.com
 ```
 
 You can also use [cake](http://jashkenas.github.com/coffee-script/documentation/docs/cake.html) to open the command file and to start the console. This will let you run coffeescript commands.

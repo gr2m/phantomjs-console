@@ -8,7 +8,9 @@ Dependencies
 
 [PhantomJS](https://github.com/ariya/phantomjs), the headless browser
 
-brew install (Mac): `$ brew update && brew install phantomjs`
+brew install (Mac):  
+`$ brew update && brew install phantomjs`
+
 other systems: [install instructions](http://phantomjs.org/download.html)
 
 

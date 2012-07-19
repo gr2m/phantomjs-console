@@ -8,13 +8,13 @@ Dependencies
 
 [PhantomJS](https://github.com/ariya/phantomjs), the headless browser
 
-If you have [brew](https://github.com/mxcl/homebrew) installed?:
+got [brew](https://github.com/mxcl/homebrew)? lucky you:
 
 ```
 $ brew update && brew install phantomjs
 ```
 
-other systems: [install instructions](http://phantomjs.org/download.html)
+other systems: [it's simple, too](http://phantomjs.org/download.html)
 
 
 1, 2 ... done

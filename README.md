@@ -3,6 +3,21 @@ Phantomjs Console
 
 Control a headless browser console right from your terminal
 
+1, 2 ... done
+---------------
+
+```
+$ brew install phantomjs
+$ cake -l http://google.com console
+
+Put your commands in the following file:
+$EDITOR .command.js
+
+Exit with ^ + C
+
+ > console.log(location)
+http://www.google.de/
+```
 
 Usage
 -------

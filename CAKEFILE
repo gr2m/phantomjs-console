@@ -20,9 +20,6 @@ task 'console', 'run a browser console, from command line', (options) ->
   spawn 'coffee', ['-b', '-c', '-w', '.command.coffee']
 
   # start console
-
-  console.log "location: |#{location}|"
-
   phantom = spawn 'phantomjs', ['phantomjs_console.coffee', location]
   phantom.stderr.on 'data', (data) ->
     process.stderr.write data.toString()

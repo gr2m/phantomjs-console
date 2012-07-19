@@ -28,12 +28,14 @@ page.open location, (status) ->
   readCommand = ->
     command = fs.read(command_file)
     fs.write command_file, ''
-    if command
-      # strip the comment on first line
-      command = command.replace /^.*\n/, ''
 
-      # strip whitespaces
-      command = command.replace /(^\s+|\s+$)/g, ''
+    # strip the comment on first line
+    command = command.replace /^.*\n/, ''
+
+    # strip whitespaces
+    command = command.replace /(^\s+|\s+$)/g, ''
+
+    if command
 
       console.log " > #{command}"
       page.evaluate execCommand, command

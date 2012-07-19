@@ -1,0 +1,30 @@
+{print} = require 'util'
+{spawn, exec} = require 'child_process'
+
+option '-l', '--location [URL*]', 'set location for console context'
+task 'console', 'run a browser console, from command line', (options) ->
+  location = options.location
+
+  unless location
+    console.log "\nUSAGE:"
+    console.log "phantomjs path/to/file.html\n"
+    return
+  
+  # make sure that command file exists
+  spawn 'touch', ['.command.coffee']
+
+  # start editor 
+  spawn process.env["EDITOR"], ['.command.coffee']
+
+  # compile & watch .command.coffee file
+  spawn 'coffee', ['-b', '-c', '-w', '.command.coffee']
+
+  # start console
+
+  console.log "location: |#{location}|"
+
+  phantom = spawn 'phantomjs', ['phantomjs_console.coffee', location]
+  phantom.stderr.on 'data', (data) ->
+    process.stderr.write data.toString()
+  phantom.stdout.on 'data', (data) ->
+    print data.toString()

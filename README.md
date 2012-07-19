@@ -1,4 +1,4 @@
-Phantomjs Console
+PhantomJS Console
 ===================
 
 Control a headless browser console right from your terminal

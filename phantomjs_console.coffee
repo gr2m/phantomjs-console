@@ -12,9 +12,13 @@ unless location
   phantom.exit()
 
 
-
-# fs.write user_flags_file, lines.join("\n"), 'w'
-
+# help
+console.log ""
+console.log "Put your commands in the following file:"
+console.log "$EDITOR #{command_file}"
+console.log ""
+console.log "Exit with ^ + C"
+console.log ""
 
 page = new WebPage()
 
@@ -50,12 +54,6 @@ page.open location, (status) ->
     console.log status + '! Unable to access ' + location
     phantom.exit()
   else
-      
-    console.log ""
-    console.log "Put your commands in the following file:"
-    console.log "$EDITOR #{command_file}"
-    console.log ""
-    console.log "Exit with ^ + C"
-    console.log ""
-
+    page.evaluate ->
+      console.log "#{location} loaded."
     setInterval readCommand, 100

@@ -3,11 +3,19 @@ Phantomjs Console
 
 Control a headless browser console right from your terminal
 
+Dependencies
+--------------
+
+[PhantomJS](https://github.com/ariya/phantomjs), the headless browser
+
+brew install (Mac): `$ brew update && brew install phantomjs`
+other systems: [install instructions](http://phantomjs.org/download.html)
+
+
 1, 2 ... done
 ---------------
 
 ```
-$ brew install phantomjs
 $ cake -l http://google.com console
 
 Put your commands in the following file:
@@ -18,6 +26,7 @@ Exit with ^ + C
  > console.log(location)
 http://www.google.de/
 ```
+
 
 Usage
 -------
@@ -38,11 +47,6 @@ $ cake -l http://google.com console
 
 Every time you hit save in your editor, the command will be executed within the scope of the passed location (a url or a local path)
 
-
-Requirements
---------------
-
-[PhantomJS](https://github.com/ariya/phantomjs), the headless browser
 
 
 How does it work?
